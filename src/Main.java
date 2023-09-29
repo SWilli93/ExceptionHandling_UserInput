@@ -43,7 +43,7 @@ public class Main {
             System.out.println("Enter a year of birth >= " + (currentYear - 125) + " and <= " + (currentYear));
             try {
                 age = checkData(currentYear, scanner.nextLine());
-                validDob = age < 0 ? false : true; // validating date of birth
+                validDob = age >= 0; // validating date of birth
             } catch (NumberFormatException badUserData) {
                 System.out.println("Characters not allowed! Try again.");
             }
